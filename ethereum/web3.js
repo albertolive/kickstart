@@ -1,7 +1,7 @@
 import Web3 from "web3";
- 
+
 let web3;
- 
+
 if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
   // We are in the browser and metamask is running.
   window.ethereum.request({ method: "eth_requestAccounts" });
@@ -13,5 +13,5 @@ if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
   );
   web3 = new Web3(provider);
 }
- 
+
 export default web3;
